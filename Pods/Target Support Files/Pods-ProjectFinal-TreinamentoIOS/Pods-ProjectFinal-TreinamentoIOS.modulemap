@@ -1,0 +1,6 @@
+framework module Pods_ProjectFinal_TreinamentoIOS {
+  umbrella header "Pods-ProjectFinal-TreinamentoIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
