@@ -15,6 +15,7 @@
 		906263EE23675A140045B671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 906263ED23675A140045B671 /* Assets.xcassets */; };
 		906263F123675A140045B671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906263EF23675A140045B671 /* LaunchScreen.storyboard */; };
 		906263FC2367601F0045B671 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906263FB2367601F0045B671 /* MyCollectionViewCell.swift */; };
+		906263FE23676E3C0045B671 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906263FD23676E3C0045B671 /* CollectionViewCell.swift */; };
 		FB4F8541AAD0B3371888ED8E /* Pods_ProjectFinal_TreinamentoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753F95AADC81BC4900A1F70C /* Pods_ProjectFinal_TreinamentoIOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		906263F023675A140045B671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		906263F223675A140045B671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		906263FB2367601F0045B671 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		906263FD23676E3C0045B671 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				906263ED23675A140045B671 /* Assets.xcassets */,
 				906263F223675A140045B671 /* Info.plist */,
 				906263EA23675A120045B671 /* ProjectFinal_TreinamentoIOS.xcdatamodeld */,
+				906263FD23676E3C0045B671 /* CollectionViewCell.swift */,
 			);
 			path = "ProjectFinal-TreinamentoIOS";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				906263E623675A120045B671 /* ViewController.swift in Sources */,
 				906263FC2367601F0045B671 /* MyCollectionViewCell.swift in Sources */,
+				906263FE23676E3C0045B671 /* CollectionViewCell.swift in Sources */,
 				906263EC23675A120045B671 /* ProjectFinal_TreinamentoIOS.xcdatamodeld in Sources */,
 				906263E223675A120045B671 /* AppDelegate.swift in Sources */,
 				906263E423675A120045B671 /* SceneDelegate.swift in Sources */,
