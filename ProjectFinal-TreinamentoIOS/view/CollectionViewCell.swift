@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import Nuke
 
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var languageImage: UIImageView!
     @IBOutlet weak var languageLabel: UILabel!
     
-    func displayContent(image: UIImage, title: String)
+    //var imageURL: String?
+    
+    func displayContent(imageURLParam: String?, title: String)
     {
-        languageImage.image = image
+        Nuke.loadImage(with: URL(string: imageURLParam!)!, into: languageImage)
         languageLabel.text  = title
     }
-    
 }

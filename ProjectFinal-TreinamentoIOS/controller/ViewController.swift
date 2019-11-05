@@ -22,12 +22,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let ROOT = "https://curso-iniciantes-1.getsandbox.com"
     let LANGUAGES = "/collectionView/programmingLanguages"
     
+    var data: Data? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //Service().getLanguages()
-        getLanguages()
+        
+        self.languages = Service().getLanguages()
+
+        self.collectionViewData.reloadData()
+        //getLanguages()
     }
     
     // MARK: - UICollectionViewDataSource protocol
@@ -40,14 +45,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
+        let language = languages[indexPath.row]
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LanguagesCell", for: indexPath) as! CollectionViewCell
         
-        cell.languageLabel.text = languages[indexPath.row].name
-
-        // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        //cell.languageLabel.text = self.lableTitles?[indexPath.row].desc
-        //cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
+        cell.displayContent(imageURLParam: language.imageURL, title: language.name!)
 
         return cell
     }
@@ -63,6 +65,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         width: (self.view.frame.width - 45) / 2,
         height: 53
       )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 15
     }
     
     func getLanguages() {
